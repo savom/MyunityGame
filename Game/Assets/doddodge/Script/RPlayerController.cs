@@ -21,7 +21,7 @@ public class RPlayerController : MonoBehaviour
         float xSpeed = xInput * speed;
         float zSpeed = zInput * speed;
 
-        Vector3 newVelocity = new Vector3(-xSpeed, 0f, -zSpeed);
+        Vector3 newVelocity = new Vector3(xSpeed, 0f, zSpeed);
         rb.velocity = newVelocity;
 
 
@@ -31,5 +31,7 @@ public class RPlayerController : MonoBehaviour
     public void Die()
     {
         gameObject.SetActive(false);
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        gameManager.EndGame();
     }
 }

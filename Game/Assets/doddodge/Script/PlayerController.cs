@@ -1,8 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaterController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public Rigidbody rb;
     public float speed = 8.0f;
@@ -21,7 +21,7 @@ public class PlaterController : MonoBehaviour
         float xSpeed = xInput * speed;
         float zSpeed = zInput * speed;
 
-        Vector3 newVelocity = new Vector3 (xSpeed, 0f, zSpeed);
+        Vector3 newVelocity = new Vector3(xSpeed, 0f, zSpeed);
         rb.velocity = newVelocity;
 
 
@@ -31,5 +31,7 @@ public class PlaterController : MonoBehaviour
     public void Die()
     {
         gameObject.SetActive(false);
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        gameManager.EndGame();
     }
 }
