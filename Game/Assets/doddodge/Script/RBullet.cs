@@ -18,7 +18,7 @@ public class RBullet : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            RPlayerController RPlayerController = other.GetComponent<RPlayerController>();
+            AxisMovement2 RPlayerController = other.GetComponent<AxisMovement2>();
             if (RPlayerController != null)
             {
                 RPlayerController.Die();

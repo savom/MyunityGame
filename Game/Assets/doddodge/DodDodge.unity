@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 1076273970}
   - component: {fileID: 1076273969}
   - component: {fileID: 1076273974}
-  - component: {fileID: 1076273973}
+  - component: {fileID: 1076273975}
   m_Layer: 0
   m_Name: Reverse Player
   m_TagString: Player
@@ -666,20 +666,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1076273973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076273968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac7de77cd471e144185695199f59a975, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1076273974}
-  speed: 8
 --- !u!54 &1076273974
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -707,6 +693,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &1076273975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076273968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c610dfce0c108f4aabaffde2002883e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  horizontalAxis: Horizontal
+  verticalAxis: Vertical
 --- !u!1 &1243390646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,11 +1664,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1877557011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eb85fba7f5ebc44cbd2715ab22cc048, type: 3}
+  m_Script: {fileID: 11500000, guid: b71f609a6f71b6f488864c7ce9785bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 1877557012}
-  speed: 1
+  speed: 8
+  horizontalAxis: Horizontal2
+  verticalAxis: Vertical2
 --- !u!1001 &503208273536573065
 PrefabInstance:
   m_ObjectHideFlags: 0

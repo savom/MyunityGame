@@ -20,7 +20,7 @@ public class NewBehaviourScript : MonoBehaviour
         
         if (other.tag == "Player")
         {
-            PlayerController playerContoller = other.GetComponent<PlayerController>();
+            AxisMovement playerContoller = other.GetComponent<AxisMovement>();
             if (playerContoller != null)
             {
                 playerContoller.Die();

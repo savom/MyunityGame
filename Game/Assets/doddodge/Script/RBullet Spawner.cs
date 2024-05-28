@@ -18,7 +18,7 @@ public class RBulletSpawner : MonoBehaviour
     {
         timeAfterSpawn = 0f;
         spawnRate = Random.Range(spawnRateMin, spawnRateMax);
-        target = FindObjectOfType<RPlayerController>().transform;
+        target = FindObjectOfType<AxisMovement2>().transform;
 
 
     }
