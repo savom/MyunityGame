@@ -16,26 +16,47 @@ public class NewBehaviourScript : MonoBehaviour
 
 
 
-        
+            
     
 
         Destroy(gameObject, 5f);
     }
     private void OnTriggerEnter(Collider other)
     {
-        
-        
+
+
+        //if (other.tag == "Player")
+        //{
+        //    AxisMovement playerContoller = other.GetComponent<AxisMovement>();
+        //    if (playerContoller != null)
+        //    {
+        //        playerContoller.Die();
+        //    }
+        //    Destroy(gameObject);
+        //}
         if (other.tag == "Player")
         {
-            AxisMovement playerContoller = other.GetComponent<AxisMovement>();
-            if (playerContoller != null)
+            //AxisMovement2 RPlayerController = other.GetComponent<AxisMovement2>();
+            //if (RPlayerController != null)
+            //{
+            //    RPlayerController.Die();
+            //}
+
+            AxisMovement playerController = other.GetComponent<AxisMovement>();
+            if (playerController != null)
             {
-                playerContoller.Die();
+                playerController.Die();
             }
+
+            // Player2Controller를 검사하고 Die 메서드 호출
+            AxisMovement2 RPlayerController = other.GetComponent<AxisMovement2>();
+            if (RPlayerController != null)
+            {
+                RPlayerController.Die();
+            }
+
         }
-        
     }
-    
 
     // Update is called once per frame
     void Update()

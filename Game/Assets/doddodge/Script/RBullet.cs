@@ -18,11 +18,25 @@ public class RBullet : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            //AxisMovement2 RPlayerController = other.GetComponent<AxisMovement2>();
+            //if (RPlayerController != null)
+            //{
+            //    RPlayerController.Die();
+            //}
+            AxisMovement playerController = other.GetComponent<AxisMovement>();
+            if (playerController != null)
+            {
+                playerController.Die();
+            }
+
+            // Player2Controller를 검사하고 Die 메서드 호출
             AxisMovement2 RPlayerController = other.GetComponent<AxisMovement2>();
             if (RPlayerController != null)
             {
                 RPlayerController.Die();
             }
+
+            Destroy(gameObject);
         }
     }
 
