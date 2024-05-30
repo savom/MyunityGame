@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+
     public float speed = 10f;
     private Rigidbody bulletRb;
     // Start is called before the first frame update
@@ -11,6 +12,12 @@ public class NewBehaviourScript : MonoBehaviour
     {
         bulletRb = GetComponent<Rigidbody>();
         bulletRb.velocity = transform.forward * speed;
+
+
+
+
+        
+    
 
         Destroy(gameObject, 5f);
     }
